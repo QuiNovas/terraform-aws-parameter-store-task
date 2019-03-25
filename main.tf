@@ -1,4 +1,8 @@
 module "parameter_store_task" {
+  environment_variables {
+    SSM_KMS_KEY_ARN = "${var.ssm_kms_key_arn}"
+  }
+
   dead_letter_arn = "${var.dead_letter_arn}"
   handler         = "function.handler"
   kms_key_arn     = "${var.kms_key_arn}"

@@ -13,3 +13,8 @@ variable "name_prefix" {
   description = "The prefix to place on all created resources"
   type        = "string"
 }
+
+variable "ssm_kms_key_arn" {
+  description = "The arn of the KMS key used to encrypt/decrypt the Secure string parameters"
+  type        = "string"
+}
