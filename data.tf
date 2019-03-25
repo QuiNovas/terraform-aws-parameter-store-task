@@ -18,8 +18,7 @@ data "aws_iam_policy_document" "parameter_store_task" {
   statement {
     actions = [
       "kms:Decrypt",
-      "kms:Encrypt",
-      "kms:GenerateDataKey*",
+      "kms:Encrypt"
     ]
 
     resources = [
