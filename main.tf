@@ -4,7 +4,7 @@ module "parameter_store_task" {
   handler         = "function.handler"
   kms_key_arn     = "${var.kms_key_arn}"
   l3_object_key   = "quinovas/parameter-store-task/parameter-store-task-0.0.1.zip"
-  name            = "${var.name_prefix}-parameter-store-task"
+  name            = "${var.name_prefix}parameter-store-task"
 
   policy_arns = [
     "${aws_iam_policy.parameter_store_task.arn}",
@@ -18,6 +18,6 @@ module "parameter_store_task" {
 }
 
 resource "aws_iam_policy" "parameter_store_task" {
-  name   = "${var.name_prefix}-parameter-store-task"
+  name   = "${var.name_prefix}parameter-store-task"
   policy = "${data.aws_iam_policy_document.parameter_store_task.json}"
 }
