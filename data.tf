@@ -5,7 +5,6 @@ data "aws_iam_policy_document" "parameter_store_task" {
       "ssm:GetParameters",
       "ssm:GetParameter",
       "ssm:GetParametersByPath",
-      "ssm:GetParameterHistory",
     ]
 
     resources = [
