@@ -3,7 +3,7 @@ module "parameter_store_task" {
   dead_letter_arn = "${var.dead_letter_arn}"
   handler         = "function.handler"
   kms_key_arn     = "${var.kms_key_arn}"
-  l3_object_key   = "quinovas/parameter-store-task/parameter-store-task-0.0.1.zip"
+  l3_object_key   = "quinovas/parameter-store-task/parameter-store-task-0.1.0.zip"
   name            = "${var.name_prefix}parameter-store-task"
 
   policy_arns = [
@@ -13,7 +13,7 @@ module "parameter_store_task" {
   policy_arns_count = 1
   runtime           = "python3.7"
   source            = "QuiNovas/lambdalambdalambda/aws"
-  timeout           = 60
+  timeout           = 300
   version           = "0.2.0"
 }
 
