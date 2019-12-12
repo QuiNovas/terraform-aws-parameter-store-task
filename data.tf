@@ -14,3 +14,4 @@ data "aws_iam_policy_document" "parameter_store_task" {
     sid = "ReadAndWriteParameters"
   }
 }
+
