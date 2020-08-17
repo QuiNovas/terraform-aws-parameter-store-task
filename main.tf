@@ -12,7 +12,7 @@ module "parameter_store_task" {
   runtime = "python3.7"
   source  = "QuiNovas/lambdalambdalambda/aws"
   timeout = 300
-  version = "3.0.1"
+  version = "3.0.2"
 }
 
 resource "aws_iam_policy" "parameter_store_task" {
